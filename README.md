@@ -31,5 +31,16 @@ lrwxr-xr-x   1 jima  staff    54 Feb 25 12:47 opentree.pem@ -> ec2-54-202-160-17
 -rw-------   1 jima  staff  1675 Dec 31 19:21 opentreeapi-gh.pem
 ```
 
+### Running the push scripts
+
+For best results, run the scripts from within the ```opentree/deploy``` directory. If you've installed the ```opentree``` and ```deployed-systems``` repos side by side, let's start from the parent directory of both repos):
+
+```bash
+$ cd opentree/deploy
+$ ./push.sh -c ../../deployed-systems/development/ot3.config opentree
+```
+
+It's a little awkward, but this will ensure a clear separation of tools, configuration files, and sensitive files.
+
 _**TODO**: Do we need a solution when a server is **shared** between two systems? For example, if someone sets up a new 'test' system that uses a running treemachine in 'development'. Should we repeat its configuration file in both bundles, or note this is a dependency (perhaps in a one-line DEPENDENCIES file) to avoid accidental changes to configuration?_
 
