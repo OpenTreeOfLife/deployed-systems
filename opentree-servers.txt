@@ -1,0 +1,26 @@
+Information on all of the Open Tree EC2 servers.  This information is volatile.  Please try to keep it up to date.
+
+They are all Debian 7.1 unless otherwise indicated.  
+
+name  server.type  OS  hostname  who-is-responsible  notes
+
+ot1  RETIRED
+ot2  RETIRED
+ot3 m1.small  ec2-54-202-237-199.us-west-2.compute.amazonaws.com = dev.opentreeoflife.org
+   Jim
+   Points to ot10 for API and ot9 for neo4j services.
+ot4  RETIRED  m1.large 7.5G    ec2-54-212-144-245.us-west-2.compute.amazonaws.com
+ot5   Name is reserved for a 17G instance to replace ot4, if ot4 turns out to be too small.
+ot6 m1.small ec2-54-203-212-107.us-west-2.compute.amazonaws.com
+   JAR
+   Provides neo4j services on the model village (Asterales taxonomy / studies)
+   Has taxomachine; waiting for oti and treemachine fixes
+ot7 m1.small  ec2-54-203-170-250.us-west-2.compute.amazonaws.com
+   Duke
+   For API debugging
+ot8 aborted
+ot9 m1.large 7.5G  ec2-54-203-194-13.us-west-2.compute.amazonaws.com
+   Cody / Stephen
+   For taxomachine and treemachine database debugging
+ot10 8G  ashby.csail.mit.edu Debian 7.3 with solid state drive
+   Jim is managing this for API and OTI
