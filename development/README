@@ -1,0 +1,2 @@
+This setup uses ot3 for web2py apps, ot9 for all neo4j servers (treemachine,
+taxomachine) and ot10 for the OTOL API.
