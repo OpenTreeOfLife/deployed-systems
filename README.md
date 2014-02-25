@@ -3,11 +3,33 @@ deployed-systems
 
 A collection of current (and past) server configuration files for opentree components. These are provided here as a way of sharing admin duties safely, and also as a set of working examples for others who want to use the [opentree deployment tools](https://github.com/OpenTreeOfLife/opentree/tree/master/deploy).
 
+### Overview
+
 Each named directory represents a complete working system, e.g., 'development' or 'production'. Typically this involves multiple servers working in concert, each providing websites or other services in the OpenTreeOfLife project. 
 
 See the README file in each directory for a description of each system's purpose and notable history. For more on our deployment tools and how to use them, see the [deplyment README](https://github.com/OpenTreeOfLife/opentree/tree/master/deploy) in the main 'opentree' repository.
 
+### Available servers
+
 The file [opentree-servers.txt](https://github.com/OpenTreeOfLife/deployed-systems/blob/master/opentree-servers.txt) contains a list of all servers currently available to the project. Note that we commonly refer to these in a serialized shorthand, e.g., an AWS server called _ec2-54-203-212-107.us-west-2.compute.amazonaws.com_ will simply be designated **ot6**. When in doubt as to the naming of a server, this list is the authoritative source.
+
+### Sensitive information
+
+Deployment requires a variety of private keys and API secrets. Naturally, these should kept far from this repository. To facilitate sharing of config files, please keep them all in ```~/.ssh/opentree```. It's already a pretty varied collection:
+
+```bash
+$ ls -alF ~/.ssh/opentree
+total 56
+drwx------   9 jima  staff   306 Feb 25 13:17 ./
+drwx------@ 19 jima  staff   646 Feb 25 13:12 ../
+-rw-------   1 jima  staff    41 Feb 25 13:16 GITHUB_CLIENT_SECRET-dev.opentreeoflife.org
+-rw-------   1 jima  staff  1696 Oct 29 10:56 ec2-54-202-160-175.us-west-2.compute.amazonaws.com.pem
+-rw-------   1 jima  staff  1696 Oct 29 10:53 ec2-54-212-192-235.us-west-2.compute.amazonaws.com.pem
+-rw-------   1 jima  staff    41 Feb 23 00:34 janrain.key
+-rw-------@  1 jima  staff  1679 Dec 20 01:39 opentree-gh.pem
+lrwxr-xr-x   1 jima  staff    54 Feb 25 12:47 opentree.pem@ -> ec2-54-202-160-175.us-west-2.compute.amazonaws.com.pem
+-rw-------   1 jima  staff  1675 Dec 31 19:21 opentreeapi-gh.pem
+```
 
 _**TODO**: Do we need a solution when a server is **shared** between two systems? For example, if someone sets up a new 'test' system that uses a running treemachine in 'development'. Should we repeat its configuration file in both bundles, or note this is a dependency (perhaps in a one-line DEPENDENCIES file) to avoid accidental changes to configuration?_
 
