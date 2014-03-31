@@ -7,4 +7,4 @@ Host ot7
 Host ot9
     Hostname ec2-54-203-194-13.us-west-2.compute.amazonaws.com
 Host ot10
-    Hostname ashby.csail.mit.edu
+    Hostname ashby.opentreeoflife.org
