@@ -19,17 +19,22 @@ Deployment requires a variety of private keys and API secrets. Naturally, these 
 
 ```bash
 $ ls -alF ~/.ssh/opentree
-total 56
-drwx------   9 jima  staff   306 Feb 25 13:17 ./
-drwx------@ 19 jima  staff   646 Feb 25 13:12 ../
--rw-------   1 jima  staff    41 Feb 25 13:16 GITHUB_CLIENT_SECRET-dev.opentreeoflife.org
+total 104
+drwx------  15 jima  staff   510 Apr 16 05:35 ./
+drwx------@ 20 jima  staff   680 Apr 10 13:08 ../
+-rw-------   1 jima  staff    41 Apr  7 02:21 OPENTREEAPI_OAUTH_TOKEN
+-rw-------   1 jima  staff    41 Feb 25 13:16 curation-GITHUB_CLIENT_SECRET-dev.opentreeoflife.org
+-rw-------   1 jima  staff    41 Apr 15 00:34 treeview-GITHUB_CLIENT_SECRET-dev.opentreeoflife.org
 -rw-------   1 jima  staff  1696 Oct 29 10:56 ec2-54-202-160-175.us-west-2.compute.amazonaws.com.pem
 -rw-------   1 jima  staff  1696 Oct 29 10:53 ec2-54-212-192-235.us-west-2.compute.amazonaws.com.pem
--rw-------   1 jima  staff    41 Feb 23 00:34 janrain.key
 -rw-------@  1 jima  staff  1679 Dec 20 01:39 opentree-gh.pem
+-rw-------   1 jima  staff  1679 Mar 25 02:47 opentree-hbf-test.pem
 lrwxr-xr-x   1 jima  staff    54 Feb 25 12:47 opentree.pem@ -> ec2-54-202-160-175.us-west-2.compute.amazonaws.com.pem
 -rw-------   1 jima  staff  1675 Dec 31 19:21 opentreeapi-gh.pem
+-rw-------   1 jima  staff  1675 Apr  1 16:21 opentreeapi-test-0.pem
+-rw-------   1 jima  staff  1679 Mar 23 20:07 opentreeapi-test-gh.pem
 ```
+
 
 ### Running the push scripts
 
