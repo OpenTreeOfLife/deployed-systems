@@ -5,6 +5,9 @@ A collection of current (and past) server configuration files for opentree compo
 
 ### Overview
 
+deployment.conf lists the hosts for the services in production and
+development mode (currently just the "api" services are listed).
+
 Each named directory represents a complete working system, e.g., 'development' or 'production'. Typically this involves multiple servers working in concert, each providing websites or other services in the OpenTreeOfLife project. 
 
 See the README file in each directory for a description of each system's purpose and notable history. For more on our deployment tools and how to use them, see the [deplyment README](https://github.com/OpenTreeOfLife/opentree/tree/master/deploy) in the main 'opentree' repository.
