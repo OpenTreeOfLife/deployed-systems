@@ -1,7 +1,7 @@
-This setup uses ot3 for web2py apps, ot9 for treemachine and taxomachine, and
-ot6 for the Open Tree API and oti. 
+This setup uses ot3 for web2py apps, ot9 for all neo4j servers (treemachine,
+taxomachine, oti) and ot6 for the Open Tree API. 
 
-NOTE that the API and oti are using a dummy docstore (hbf_phylesystem_test), so we can build and test
+NOTE that the API and oti are using a dummy docstore, so we can build and test
 the API without polluting the real docstore repo!
 
 CURRENTLY UNUSED: ot10 (alternate server for Open Tree API)
