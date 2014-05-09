@@ -17,7 +17,7 @@ ot6 m1.small ec2-54-203-212-107.us-west-2.compute.amazonaws.com
    Has taxomachine; waiting for oti and treemachine fixes
 ot7 m1.small  ec2-54-203-170-250.us-west-2.compute.amazonaws.com
    Mark
-   For API debugging
+   For the "production" API
 ot8 aborted
 ot9 m1.large 7.5G  ec2-54-203-194-13.us-west-2.compute.amazonaws.com
    Cody / Stephen
