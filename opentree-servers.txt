@@ -23,4 +23,4 @@ ot9 m1.large 7.5G  ec2-54-203-194-13.us-west-2.compute.amazonaws.com
    Cody / Stephen
    For taxomachine and treemachine database debugging
 ot10 8G  ashby.opentreeoflife.org Debian 7.3 with solid state drive
-   Jim is managing this for API and OTI
+   Mark is managing this for API and OTI
