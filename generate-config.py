@@ -60,8 +60,8 @@ if __name__ == '__main__':
     otihost = tag2host(otihost_tag)
     apihost_tag = service2node['api']
     apihost = tag2host(apihost_tag)
-    print node_set
     for host_tag in node_set:
+        sys.stderr.write('Creating config file for {} ...\n'.format(host_tag))
         host = tag2host(host_tag)
         component_list = []
         for service in node2service[host_tag]:
@@ -77,8 +77,8 @@ OPENTREE_NEO4J_HOST={neo4jhost} # {neo4jhost_tag}
 OPENTREE_DOCSTORE={studyrepo}
 TREEMACHINE_BASE_URL=http://${onhstr}/treemachine
 TAXOMACHINE_BASE_URL=http://${onhstr}/taxomachine
-OTI_BASE_URL={otihost}/oti  # {otihost_tag}
-OPENTREE_API_BASE_URL={apihost}/api/v1  # {apihost_tag}
+OTI_BASE_URL=http://{otihost}/oti  # {otihost_tag}
+OPENTREE_API_BASE_URL=http://{apihost}/api/v1  # {apihost_tag}
 
 CURATION_GITHUB_CLIENT_ID=9a81785e2af910035667
 CURATION_GITHUB_REDIRECT_URI=http://${{OPENTREE_PUBLIC_DOMAIN}}/curator/user/login
@@ -88,22 +88,22 @@ TREEVIEW_GITHUB_CLIENT_ID=32cb7a650c449237398d
 TREEVIEW_GITHUB_REDIRECT_URI=http://${{OPENTREE_PUBLIC_DOMAIN}}/opentree/user/login
 # NOTE that GITHUB_CLIENT_SECRET is kept in a separate file, outside of the repo
  
-# -----
-# The opentree_branch command specifies which branch to use for the
-# given repo.  The default is always 'master'.
-
-
-# opentree_branch opentree master
-# opentree_branch oti master
-# opentree_branch taxomachine master
-# opentree_branch treemachine master
-# opentree_branch peyotl master
 
 OPEN_TREE_API_LOGGING_LEVEL=debug
 OPEN_TREE_API_LOGGING_FILEPATH=/home/opentree/log/api.log
 OPEN_TREE_API_LOGGING_FORMATTER=rich
 export PEYOTL_LOGGING_LEVEL=debug
 export PEYOTL_LOG_FILE_PATH=/home/opentree/log/peyotl.log
+
+# -----
+# The opentree_branch command specifies which branch to use for the
+# given repo.  The default is always 'master'.
+
+# opentree_branch opentree master
+# opentree_branch oti master
+# opentree_branch taxomachine master
+# opentree_branch treemachine master
+# opentree_branch peyotl master
 
 '''.format(host_tag=host_tag,
            host=host,

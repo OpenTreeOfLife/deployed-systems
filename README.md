@@ -52,3 +52,29 @@ It's a little awkward, but this will ensure a clear separation of tools, configu
 
 _**TODO**: Do we need a solution when a server is **shared** between two systems? For example, if someone sets up a new 'test' system that uses a running treemachine in 'development'. Should we repeat its configuration file in both bundles, or note this is a dependency (perhaps in a one-line DEPENDENCIES file) to avoid accidental changes to configuration?_
 
+
+# Experimental
+
+We are considering a terse configuration file can be used to generate the richer specific
+config files. Some tweaking maybe necessary (e.g. the correction of what branch of each codebase).  To try this system out:
+
+    $ mkdir test-dev
+    $ cd test-dev
+    $ python ../generate-config.py ../terse.conf development
+
+to generate candidate config files that could then be moved to development subdirectory (and then
+deployed in the normal way). 
+
+**Advantages**
+
+1. We could write a development tool that easily reads the ```terse.conf``` to figure out
+the endpoints of the services for the development and production systems. This would make it easier to
+write a crontab (or Travis CI hook) that checks for regressions of the APIs in the development and 
+production environment.
+
+1. ```terse.conf``` is going to a be a lot easier for people to understand, and the developer in charge
+of each tweakable tool will just need to make sure that ```generate-config.py``` is up to date.
+
+**Disadvantages**
+
+1. If we tweak the "raw" configs too much and forget to update, ```terse.conf``` then we'll be misled.
