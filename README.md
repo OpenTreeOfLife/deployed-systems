@@ -56,7 +56,12 @@ _**TODO**: Do we need a solution when a server is **shared** between two systems
 # Experimental
 
 We are considering a terse configuration file can be used to generate the richer specific
-config files. Some tweaking maybe necessary (e.g. the correction of what branch of each codebase).  To try this system out:
+config files.
+Some tweaking of the real config files may still be necessary (e.g. the correction of what
+branch of each codebase is deployed).
+But the ```terse.conf``` would summarize where the main services are deployed.
+
+To try this system out:
 
     $ mkdir test-dev
     $ cd test-dev
