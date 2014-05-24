@@ -73,8 +73,8 @@ write a crontab (or Travis CI hook) that checks for regressions of the APIs in t
 production environment.
 
 1. ```terse.conf``` is going to a be a lot easier for people to understand, and the developer in charge
-of each tweakable tool will just need to make sure that ```generate-config.py``` is up to date.
+of each tweakable tool will just need to make sure that the logic in ```generate-config.py``` is up to date.
 
 **Disadvantages**
 
-1. If we tweak the "raw" configs too much and forget to update, ```terse.conf``` then we'll be misled.
+1. If we tweak the "raw" configs too much and forget to update ```terse.conf```, then we'll be misled.
