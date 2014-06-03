@@ -4,4 +4,3 @@ ot10 for the Open Tree API and oti.
 NOTE that the API and oti are using a dummy docstore (phylesystem-0), so we can build and test
 the API without polluting the real docstore repo!
 
-CURRENTLY UNUSED: ot6 (alternate server for Open Tree API)
