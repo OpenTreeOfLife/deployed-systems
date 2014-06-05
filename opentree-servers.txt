@@ -24,3 +24,9 @@ ot9 m1.large 7.5G  ec2-54-203-194-13.us-west-2.compute.amazonaws.com
    For taxomachine and treemachine database debugging
 ot10 8G  ashby.opentreeoflife.org Debian 7.3 with solid state drive
    Mark is managing this for API and OTI
+ot11 m3.medium  ec2-54-189-63-165.us-west-2.compute.amazonaws.com
+   Initial production server for study-curation and synth-tree explorer apps
+   a.k.a. tree.opentreeoflife.org
+ot12 m3.large  ec2-54-185-162-66.us-west-2.compute.amazonaws.com
+   Initial production server for all Open Tree API services
+   a.k.a. api.opentreeoflife.org
