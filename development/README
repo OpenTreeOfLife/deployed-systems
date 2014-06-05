@@ -1,6 +1,2 @@
-This setup uses ot3 for web2py apps, ot9 for treemachine and taxomachine, and
-ot10 for the Open Tree API and oti. 
-
-NOTE that the API and oti are using a dummy docstore (phylesystem-0), so we can build and test
-the API without polluting the real docstore repo!
+This setup uses ot11 for the main webapp and curator, ot12 for everything else.
 
