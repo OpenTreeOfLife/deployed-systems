@@ -1,2 +1,5 @@
 This setup uses ot11 for the main webapp and curator, ot12 for everything else.
+Note that curator on ot11 uses ot10 for phyleysystem-API and oti.
 
+phylesystem-api on ot10 and ot12 use phylesystem-0. This is not a happy situation.
+ot10 will switch to using phylesystem-1 soon (hopefully).
