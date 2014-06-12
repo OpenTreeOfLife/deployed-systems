@@ -1,8 +1,2 @@
-This setup uses ot11 for the main webapp and curator, ot12 (borrowed from the
-'production' system) for treemachine and taxomachine, and ot10 for everything
+This setup uses ot11 for the main webapp and curator, and ot10 for everything
 else. The phylesystem-api on ot10 is now using phylesystem-1.
-
-TODO: Consolidate all services on ot10? It looks treemachine and taxomachine
-are installed there, and our use of ot12:
-    $OPENTREE_NEO4J_HOST=ot12.opentreeoflife.org
-...is just legacy cruft.
