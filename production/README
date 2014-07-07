@@ -1,4 +1,4 @@
-This setup uses ot3 for web2py browser app and ot9 for treemachine and taxomachine.
+This setup uses ot3 for web2py browser app and ot9 for treemachine and taxomachine, ot12 for oti and phylesystem-api.
 
 The curator on ot3 redirects to ot11 (development).
 
