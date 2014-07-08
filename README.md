@@ -7,12 +7,52 @@ A collection of current (and past) server configuration files for opentree compo
 
 Each named directory represents a complete working system, e.g., 'development' or 'production'. Typically this involves multiple servers working in concert, each providing websites or other services in the OpenTreeOfLife project. These are named for common clades, adding new ones in alphabetical order: Atta, Bos, ... 
 
-As each new system is provisioned, it is assigned to the domain names for development (devtree.opentreeoflife.org, devapi.opentreeoflife.org, etc). Once it's been thoroughly tested, its machines are re-assigned to production domains (tree.opentreeoflife.org, api.opentreeoflife.org, etc). Note that this also involves some changes to individual server-config files:
-    - Re-assign incoming production servers to use the production docstore.
-    - Changes *_GITHUB_CLIENT_ID and *_GITHUB_REDIRECT_URI, which are domain-specific.
-    - Update DNS records for production and dev domain names. (TTL should be on a "short leash" for fast changeover.)
+These systems are in turn mapped to our domain names for dev, production, etc. as described in 'Migrating to a new production system' below.
 
 See the README file in each directory for a description of each system's purpose and notable history. For more on our deployment tools and how to use them, see the [deployment README](https://github.com/OpenTreeOfLife/opentree/tree/master/deploy) in the main 'opentree' repository. Details on the use of each value in a server-config file can be found in the commented [sample.config](https://github.com/OpenTreeOfLife/opentree/tree/master/deploy/sample.config) file.
+
+### Migrating to a new production system
+
+As each new system is provisioned, it is typically assigned to the domain names for development (devtree.opentreeoflife.org, devapi.opentreeoflife.org, etc). Once it's been thoroughly tested, its machines are re-assigned to production domains (tree.opentreeoflife.org, api.opentreeoflife.org, etc). 
+
+Here I will use "incoming" and "outgoing" to describe systems in transition from (for example) dev to production. For example, during a given migration system Bos might be the **outgoing** dev and **incoming** production system.
+
+Of course, the crux of a migration is updating the DNS records for our production and dev domains. For a fast and smooth changeover, the TTL (time to live) settings for these domains should be very short. But before we "throw the switch", we also need to make some changes to individual server-config files in the **incoming production** system:
+
+    - _[TODO: Suspend / redirect live production domains?]_
+
+    - Re-assign incoming production servers to use the production docstore (OPENTREE_DOCSTORE) and databases.
+
+    - Update *_GITHUB_CLIENT_ID and *_GITHUB_REDIRECT_URI variables, which are domain-specific. These GitHub app registrations are already created, so it's just a matter of moving the production values to the incoming production servers, etc.
+
+    - Update all hostnames and base URLs for services to use our standard production domains:
+        - OPENTREE_API_HOST
+        - OPENTREE_API_BASE_URL (i.e., phylesystem-api)
+        - TREEMACHINE_BASE_URL
+        - TAXOMACHINE_BASE_URL
+        - OTI_BASE_URL
+      If all services are on one machine, just set OPENTREE_API_HOST and prepend this to the base URLs. Easy!
+
+    - Set OPENTREE_PUBLIC_DOMAIN=tree.opentreeoflife.org
+
+Similar steps should be taken for servers in the **incoming dev** system:
+
+    - Re-assign incoming dev servers to use the dev docstore and databases. This may also require changes to OPENTREE_GH_IDENTITY _[TODO: Confirm this!]_
+
+    - Change *_GITHUB_CLIENT_ID and *_GITHUB_REDIRECT_URI, which are domain-specific, to use the GitHub apps on dev domains.
+
+    - Set OPENTREE_PUBLIC_DOMAIN=devtree.opentreeoflife.org
+
+Systems that are not currently mapped to dev or production domains are assumed to be test systems. These should use explicit server names like 'ot11.opentreeoflife.org' in their server-config files. And of course they should **not** be using the production docstore or data! Authentication (login) for these systems can be enabled in **local** testing as follows:
+
+    - Change *_GITHUB_CLIENT_ID and *_GITHUB_REDIRECT_URI, which are domain-specific, to use the GitHub apps on dev domains.
+
+    - Modify your local HOSTS file (usually `/etc/hosts`) to remap dev domains (devtree.opentreeoflife.org, devapi.opentreeoflife.org, etc) to point to the corresponding server IPs for ot11, etc.
+
+    - Set OPENTREE_PUBLIC_DOMAIN=devtree.opentreeoflife.org
+
+For now, we're using this manual checklist for migrations. Once we've refined the process, we should be able to create easier migration scripts.
+
 
 ### Available servers
 
