@@ -5,7 +5,12 @@ A collection of current (and past) server configuration files for opentree compo
 
 ### Overview
 
-Each named directory represents a complete working system, e.g., 'development' or 'production'. Typically this involves multiple servers working in concert, each providing websites or other services in the OpenTreeOfLife project. 
+Each named directory represents a complete working system, e.g., 'development' or 'production'. Typically this involves multiple servers working in concert, each providing websites or other services in the OpenTreeOfLife project. These are named for common clades, adding new ones in alphabetical order: Atta, Bos, ... 
+
+As each new system is provisioned, it is assigned to the domain names for development (devtree.opentreeoflife.org, devapi.opentreeoflife.org, etc). Once it's been thoroughly tested, its machines are re-assigned to production domains (tree.opentreeoflife.org, api.opentreeoflife.org, etc). Note that this also involves some changes to individual server-config files:
+    - Re-assign incoming production servers to use the production docstore.
+    - Changes *_GITHUB_CLIENT_ID and *_GITHUB_REDIRECT_URI, which are domain-specific.
+    - Update DNS records for production and dev domain names. (TTL should be on a "short leash" for fast changeover.)
 
 See the README file in each directory for a description of each system's purpose and notable history. For more on our deployment tools and how to use them, see the [deployment README](https://github.com/OpenTreeOfLife/opentree/tree/master/deploy) in the main 'opentree' repository. Details on the use of each value in a server-config file can be found in the commented [sample.config](https://github.com/OpenTreeOfLife/opentree/tree/master/deploy/sample.config) file.
 
