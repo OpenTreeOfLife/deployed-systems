@@ -11,7 +11,8 @@ Host ot12
     Hostname ot12.opentreeoflife.org
     Hostname ec2-54-185-162-66.us-west-2.compute.amazonaws.com
 Host ot13
-    Hostname splashopentreeoflife.org
+    # Hostname splash.opentreeoflife.org
+    Hostname ot13.opentreeoflife.org
 Host ot14
     Hostname ot14.opentreeoflife.org
 Host ot15
