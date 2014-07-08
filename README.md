@@ -23,7 +23,7 @@ Of course, the crux of a migration is updating the DNS records for our productio
 
 - Re-assign incoming production servers to use the production docstore (OPENTREE_DOCSTORE) and databases.
 
-- Update *_GITHUB_CLIENT_ID and *_GITHUB_REDIRECT_URI variables, which are domain-specific. These GitHub app registrations are already created, so it's just a matter of moving the production values to the incoming production servers, etc.
+- Update `*_GITHUB_CLIENT_ID` and `*_GITHUB_REDIRECT_URI` variables, which are domain-specific. These GitHub app registrations are already created, so it's just a matter of moving the production values to the incoming production servers, etc.
 
 - Update all hostnames and base URLs for services to use our standard production domains:
     - OPENTREE_API_HOST
@@ -31,7 +31,8 @@ Of course, the crux of a migration is updating the DNS records for our productio
     - TREEMACHINE_BASE_URL
     - TAXOMACHINE_BASE_URL
     - OTI_BASE_URL
-  If all services are on one machine, just set OPENTREE_API_HOST and prepend this to the base URLs. Easy!
+
+- If all services are on one machine, just set OPENTREE_API_HOST and prepend this to the base URLs. Easy!
 
 - Set OPENTREE_PUBLIC_DOMAIN=**tree**.opentreeoflife.org
 
@@ -39,13 +40,13 @@ Similar steps should be taken for servers in the **incoming dev** system:
 
 - Re-assign incoming dev servers to use the dev docstore and databases. This may also require changes to OPENTREE_GH_IDENTITY _[TODO: Confirm this!]_
 
-- Change *_GITHUB_CLIENT_ID and *_GITHUB_REDIRECT_URI, which are domain-specific, to use the GitHub apps on dev domains.
+- Change `*_GITHUB_CLIENT_ID` and `*_GITHUB_REDIRECT_URI`, which are domain-specific, to use the GitHub apps on dev domains.
 
 - Set OPENTREE_PUBLIC_DOMAIN=**devtree**.opentreeoflife.org
 
 Systems that are not currently mapped to dev or production domains are assumed to be test systems. These should use explicit server names like 'ot11.opentreeoflife.org' in their server-config files. And of course they should **not** be using the production docstore or data! Authentication (login) for these systems can be enabled in **local** testing as follows:
 
-- Change *_GITHUB_CLIENT_ID and *_GITHUB_REDIRECT_URI, which are domain-specific, to use the GitHub apps on dev domains.
+- Change `*_GITHUB_CLIENT_ID` and `*_GITHUB_REDIRECT_URI`, which are domain-specific, to use the GitHub apps on dev domains.
 
 - Modify your local HOSTS file (usually `/etc/hosts`) to remap dev domains (**devtree**.opentreeoflife.org, **devapi**.opentreeoflife.org, etc) to point to the corresponding server IPs for ot11, etc.
 
