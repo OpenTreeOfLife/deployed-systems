@@ -1,9 +1,5 @@
 Host ot3
     Hostname ec2-54-202-237-199.us-west-2.compute.amazonaws.com
-Host ot6
-    Hostname ec2-54-203-212-107.us-west-2.compute.amazonaws.com
-Host ot7
-    Hostname ec2-54-203-170-250.us-west-2.compute.amazonaws.com
 Host ot9
     Hostname ec2-54-203-194-13.us-west-2.compute.amazonaws.com
 Host ot10
@@ -14,3 +10,9 @@ Host ot11
 Host ot12
     Hostname ot12.opentreeoflife.org
     Hostname ec2-54-185-162-66.us-west-2.compute.amazonaws.com
+Host ot13
+    Hostname splashopentreeoflife.org
+Host ot14
+    Hostname ot14.opentreeoflife.org
+Host ot15
+    Hostname ot15.opentreeoflife.org
