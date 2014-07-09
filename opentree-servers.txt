@@ -39,3 +39,5 @@ ot12 m3.large  Debian 7.4  ec2-54-185-162-66.us-west-2.compute.amazonaws.com
 ot13 micro  Debian 7.4
    intended to have as an alias the host name opentreeoflife.org (and www.)
    Holds the opentreeoflife.org 'splash page' and associated resources
+ot14 m3.large  8G (used 1600G?)  Debian 7.5  54.188.22.43
+ot15 m3.medium
