@@ -19,7 +19,7 @@ Here I will use "incoming" and "outgoing" to describe systems in transition from
 
 Of course, the crux of a migration is updating the DNS records for our production and dev domains. For a fast and smooth changeover, the TTL (time to live) settings for these domains should be very short. But before we "throw the switch", we also need to make some changes to individual server-config files in the **incoming production** system:
 
-- _[TODO: Suspend / redirect live production domains?]_
+- Suspend / redirect live production domains. **IMPORTANT**: See our notes on [**Notifying users of scheduled downtime**](https://github.com/OpenTreeOfLife/opentree/tree/master/deploy#notifying-users-of-scheduled-downtime) for details.
 
 - Re-assign incoming production servers to use the production docstore (OPENTREE_DOCSTORE) and databases.
 
