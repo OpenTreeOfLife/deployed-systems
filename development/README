@@ -1,2 +1,2 @@
-This setup uses ot11 for the main webapp and curator, and ot10 for everything
+This setup uses ot16 for the main webapp and curator, and ot10 for everything
 else. The phylesystem-api on ot10 is now using phylesystem-0.
