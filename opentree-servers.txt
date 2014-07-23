@@ -1,6 +1,14 @@
 Information on all of the Open Tree EC2 servers.  This information is
 volatile.  Please try to keep it up to date.
 
+Note that you can use the 'dig' command to check status at any given time. For example:
+   
+   $ dig +short devapi.opentreeoflife.org
+
+Returns the otXX name as well as the IP address.
+
+=List of servers=
+
 name  server.type  OS  hostname  alias  who-is-responsible  notes
 
 ot1-9  RETIRED
