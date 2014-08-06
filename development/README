@@ -1,2 +1,13 @@
 This setup uses ot16 for the main webapp and curator, and ot10 for everything
 else. The phylesystem-api on ot10 is now using phylesystem-0.
+
+
+EXPERIMENTAL:
+
+The third `localhost.config` attempts to install just the main
+webapps (ie, the devtree server) on the user's system, while using the active
+devapi server, and therefore phylesystem-0 for its data. 
+
+This is mainly intended to support testing client-side modifications, and also
+as a proof-of-concept for using the deployment scripts in a non-Linux
+environment.
