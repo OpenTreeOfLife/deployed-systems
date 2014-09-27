@@ -12,6 +12,7 @@ Returns the otXX name as well as the IP address.
 name  server.type  OS  hostname  alias  who-is-responsible  notes
 
 ot1-9  RETIRED
+ot3  not quite retired yet
 ot10  8G with solid state drive (at MIT)  Debian 7.3  ashby.opentreeoflife.org 
    a.k.a. devapi.opentreeoflife.org
    Development api (phylesystem-api + oti + taxo + tree) 
@@ -22,6 +23,9 @@ ot13  micro  Debian 7.4
    Will hold the opentreeoflife.org 'splash page' and associated resources
    from Karl's lab
 ot14  m3.medium  3.75G  Debian 7.5  api.opentreeoflife.org
-ot15  m3.large  7.5G   Debian 7.5  tree.opentreeoflife.org
+ot15  decommissioned  m3.large  7.5G   Debian 7.5  
 ot16  m1.medium  3.7G  Debian 7.5  devtree.opentreeoflife.org
 ot17  m3.medium  3.75G  Debian 7.5  asterales.opentreeoflife.org
+ot18  m3.large  7.5G   Debian 7.5  former production, to be decommissioned 
+ot19  m3.large  7.5G   Debian 7.5  MLS tree (talk to Stephen)
+ot20  m3.large  7.5G   Debian 7.5  production  tree.opentreeoflife.org

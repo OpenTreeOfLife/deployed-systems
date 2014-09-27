@@ -5,17 +5,23 @@ A collection of current (and past) server configuration files for opentree compo
 
 ### Overview
 
-Each named directory represents a complete working system, e.g., 'development' or 'production'. Typically this involves multiple servers working in concert, each providing websites or other services in the OpenTreeOfLife project. These are named for common clades, adding new ones in alphabetical order: `Atta`, `Bos`, ... 
-
-These systems are in turn mapped to our domain names for dev, production, etc. as described in 'Migrating to a new production system' below.
+Each named directory represents a complete working system, e.g., 'development' or 'production'. Typically this involves multiple servers working in concert, each providing websites or other services in the OpenTreeOfLife project.
 
 See the README file in each directory for a description of each system's purpose and notable history. For more on our deployment tools and how to use them, see the [deployment README](https://github.com/OpenTreeOfLife/opentree/tree/master/deploy) in the main 'opentree' repository. Details on the use of each value in a server-config file can be found in the commented [sample.config](https://github.com/OpenTreeOfLife/opentree/tree/master/deploy/sample.config) file.
 
 ### Migrating to a new production system
 
-As each new system is provisioned, it is typically assigned to the domain names for development (**devtree**.opentreeoflife.org, **devapi**.opentreeoflife.org, etc). Once it's been thoroughly tested, its machines are re-assigned to production domains (**tree**.opentreeoflife.org, **api**.opentreeoflife.org, etc). 
+The production system can be updated in either of two ways.  The
+easier way is to update it in place using the deployment system.  This
+is straightforward.  Some care has to be taken to make sure there's
+enough disk space at each step.
 
-Here I will use "incoming" and "outgoing" to describe systems in transition from (for example) dev to production. For example, during a given migration `Bos` might be the **outgoing** dev system and **incoming** production system.
+The more thorough and principled approach to update is as follows.  We
+don't plan to use it in the future, at least not very often.
+
+As each new system is provisioned, it is typically assigned to temporary names (**otXX**.opentreeoflife.org, **otYY**.opentreeoflife.org, etc). Once it's been thoroughly tested, its machines are re-assigned to production domains (**tree**.opentreeoflife.org, **api**.opentreeoflife.org, etc). 
+
+Here I will use "incoming" and "outgoing" to describe systems in transition from (for example) dev to production. 
 
 Of course, the crux of a migration is updating the DNS records for our production and dev domains. For a fast and smooth changeover, the TTL (time to live) settings for these domains should be very short. But before we "throw the switch", we also need to make some changes to individual server-config files in the **incoming production** system:
 
@@ -36,19 +42,11 @@ Of course, the crux of a migration is updating the DNS records for our productio
 
 - Set OPENTREE_PUBLIC_DOMAIN=**tree**.opentreeoflife.org
 
-Similar steps should be taken for servers in the **incoming dev** system:
+Systems that are not currently mapped to development or production domains are assumed to be test systems. These should use explicit server names like 'ot11.opentreeoflife.org' in their server-config files. And of course they should **not** be using the production docstore or data! Authentication (login) for these systems can be enabled in **local** testing as follows:
 
-- Re-assign incoming dev servers to use the dev docstore and databases. This may also require changes to OPENTREE_GH_IDENTITY _[TODO: Confirm this!]_
+- Change `*_GITHUB_CLIENT_ID` and `*_GITHUB_REDIRECT_URI`, which are domain-specific, to use the GitHub apps on development domains.
 
-- Change `*_GITHUB_CLIENT_ID` and `*_GITHUB_REDIRECT_URI`, which are domain-specific, to use the GitHub apps on dev domains.
-
-- Set OPENTREE_PUBLIC_DOMAIN=**devtree**.opentreeoflife.org
-
-Systems that are not currently mapped to dev or production domains are assumed to be test systems. These should use explicit server names like 'ot11.opentreeoflife.org' in their server-config files. And of course they should **not** be using the production docstore or data! Authentication (login) for these systems can be enabled in **local** testing as follows:
-
-- Change `*_GITHUB_CLIENT_ID` and `*_GITHUB_REDIRECT_URI`, which are domain-specific, to use the GitHub apps on dev domains.
-
-- Modify your local HOSTS file (usually `/etc/hosts`) to remap dev domains (**devtree**.opentreeoflife.org, **devapi**.opentreeoflife.org, etc) to point to the corresponding server IPs for ot11, etc.
+- If you like you can modify your local HOSTS file (usually `/etc/hosts`) to remap dev domains (**devtree**.opentreeoflife.org, **devapi**.opentreeoflife.org, etc) to point to the corresponding server IPs for ot11, etc.  This might make help to direct certain test scripts to the test system.
 
 - Set OPENTREE_PUBLIC_DOMAIN=**devtree**.opentreeoflife.org
 
@@ -96,7 +94,9 @@ $ ./push.sh -c ../../deployed-systems/development/ot3.config opentree
 
 It's a little awkward, but this will ensure a clear separation of tools, configuration files, and sensitive files.
 
-_**TODO**: Do we need a solution when a server is **shared** between two systems? For example, if someone sets up a new 'test' system that uses a running treemachine in 'development'. Should we repeat its configuration file in both bundles, or note this is a dependency (perhaps in a one-line DEPENDENCIES file) to avoid accidental changes to configuration?_
+_**TODO**: Do we need a solution when a server is **shared** between two systems? For example, if someone sets up a new 'test' system that uses a running treemachine in 'development'. Should we repeat its configuration file in both bundles, or note this is a dependency (perhaps in a one-line DEPENDENCIES file) to avoid accidental changes to configuration?_  
+
+-- Having a test instance employ services such as taxomachine running on a different system works just fine, as we've seen with the MLS instance.
 
 
 # Experimental
