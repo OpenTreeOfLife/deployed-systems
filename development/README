@@ -1,2 +1,6 @@
-This setup uses ot16 for the main webapp and curator, and ot10 for everything
-else. The phylesystem-api on ot10 is now using phylesystem-0.
+This setup uses ot16 (devtree) for the main webapp and curator, and
+ot10 (devapi) for everything else. The phylesystem-api on ot10 uses
+phylesystem-0.
+
+ot10 also hosts the 'files.opentreeoflife.org' vhost, for which see
+[here](http://files.opentreeoflife.org/README.md).
