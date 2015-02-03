@@ -12,20 +12,21 @@ Returns the otXX name as well as the IP address.
 name  server.type  OS  hostname  alias  who-is-responsible  notes
 
 ot1-9  RETIRED
-ot3  not quite retired yet
-ot10  8G with solid state drive (at MIT)  Debian 7.3  ashby.opentreeoflife.org 
-   a.k.a. devapi.opentreeoflife.org
+ot10  8G with solid state drive (non-AWS at MIT)  Debian 7.3  devapi.opentreeoflife.org 
+   a.k.a. ashby.csail.mit.edu
    Development api (phylesystem-api + oti + taxo + tree) 
-   Upgraded 2014-06-10 for security updates
-ot11, ot12 - retired
-ot13  micro  Debian 7.4
-   intended to have as an alias the host name opentreeoflife.org (and www.).
-   Will hold the opentreeoflife.org 'splash page' and associated resources
-   from Karl's lab
-ot14  m3.medium  3.75G  Debian 7.5  api.opentreeoflife.org
-ot15  decommissioned  m3.large  7.5G   Debian 7.5  
+   Upgraded 2014-06-10 for security updates.  Also now has a 1T extra disk
+ot11, ot12, ot13 - retired
+ot14  m3.medium  3.75G  Debian 7.5  tree.opentreeoflife.org
+ot15  retired
 ot16  m1.medium  3.7G  Debian 7.5  devtree.opentreeoflife.org
 ot17  m3.medium  3.75G  Debian 7.5  asterales.opentreeoflife.org
-ot18  m3.large  7.5G   Debian 7.5  former production, to be decommissioned 
+ot18  retired
 ot19  m3.large  7.5G   Debian 7.5  MLS tree (talk to Stephen)
-ot20  m3.large  7.5G   Debian 7.5  production  tree.opentreeoflife.org
+ot20  m3.large  7.5G   Debian 7.5  production  api.opentreeoflife.org 
+      (phylesystem-api + oti + taxo + treem)
+ot21  micro  Debian 7.?
+   intended to eventually have as an alias the host name opentreeoflife.org 
+   (and www.).
+   Will hold the opentreeoflife.org 'splash page' and associated resources
+   from Karl's lab
