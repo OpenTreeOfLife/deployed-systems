@@ -81,11 +81,11 @@ OTI_BASE_URL=http://{otihost}/oti  # {otihost_tag}
 OPENTREE_API_BASE_URL=http://{apihost}/api/v1  # {apihost_tag}
 
 CURATION_GITHUB_CLIENT_ID=9a81785e2af910035667
-CURATION_GITHUB_REDIRECT_URI=http://${{OPENTREE_PUBLIC_DOMAIN}}/curator
+CURATION_GITHUB_REDIRECT_URI=http://${{OPENTREE_PUBLIC_DOMAIN}}/curator/user/login
 # NOTE that GITHUB_CLIENT_SECRET is kept in a separate file, outside of the repo
 
 TREEVIEW_GITHUB_CLIENT_ID=32cb7a650c449237398d
-TREEVIEW_GITHUB_REDIRECT_URI=http://${{OPENTREE_PUBLIC_DOMAIN}}/opentree
+TREEVIEW_GITHUB_REDIRECT_URI=http://${{OPENTREE_PUBLIC_DOMAIN}}/opentree/user/login
 # NOTE that GITHUB_CLIENT_SECRET is kept in a separate file, outside of the repo
  
 
