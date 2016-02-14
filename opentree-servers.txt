@@ -15,15 +15,12 @@ ot1-13  RETIRED
 ot14  m3.medium  3.75G  Debian 7.5  tree.opentreeoflife.org
 ot15  RETIRED
 ot16  m1.medium  3.7G  Debian 7.5  devtree.opentreeoflife.org
-ot17  RETIRED
+ot17  RETIRED - was for asterales
 ot18  RETIRED - was for devapi
 ot19  RETIRED - was for MLS
 ot20  m3.large  7.5G   Debian 7.5  production  api.opentreeoflife.org 
       (phylesystem-api + oti + taxo + treem)
-ot21  micro  Debian 7.?
-   intended to eventually have as an alias the host name opentreeoflife.org 
-   (and www.).
-   Will hold the opentreeoflife.org 'splash page' and associated resources
-   from Karl's lab
+ot21  micro  Debian 7.? opentreeoflife.org 'splash page' from Karl's lab
+ot22-27 RETIRED
 ot28  m4.large   devapi
 ot29  m3.medium  3.75G  Debian 7.5  asterales.opentreeoflife.org
