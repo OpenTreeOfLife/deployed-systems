@@ -19,9 +19,9 @@ enough disk space at each step.
 The more thorough and principled approach to update is as follows.  We
 don't plan to use it in the future, at least not very often.
 
-As each new system is provisioned, it is typically assigned to temporary names (**otXX**.opentreeoflife.org, **otYY**.opentreeoflife.org, etc). Once it's been thoroughly tested, its machines are re-assigned to production domains (**tree**.opentreeoflife.org, **api**.opentreeoflife.org, etc). 
+As each new system is provisioned, it is typically assigned to temporary names (**otXX**.opentreeoflife.org, **otYY**.opentreeoflife.org, etc). Once it's been thoroughly tested, its machines are re-assigned to production domains (**tree**.opentreeoflife.org, **api**.opentreeoflife.org, etc).
 
-Here I will use "incoming" and "outgoing" to describe systems in transition from (for example) dev to production. 
+Here I will use "incoming" and "outgoing" to describe systems in transition from (for example) dev to production.
 
 Of course, the crux of a migration is updating the DNS records for our production and dev domains. For a fast and smooth changeover, the TTL (time to live) settings for these domains should be very short. But before we "throw the switch", we also need to make some changes to individual server-config files in the **incoming production** system:
 
@@ -37,6 +37,7 @@ Of course, the crux of a migration is updating the DNS records for our productio
     - TREEMACHINE_BASE_URL
     - TAXOMACHINE_BASE_URL
     - OTI_BASE_URL
+    - OTINDEX_BASE_URL
 
 - If all services are on one machine, just set OPENTREE_API_HOST and prepend this to the base URLs. Easy!
 
@@ -114,13 +115,13 @@ To try this system out:
     $ python ../generate-config.py ../terse.conf development
 
 to generate candidate config files that could then be moved to development subdirectory (and then
-deployed in the normal way). 
+deployed in the normal way).
 
 **Advantages**
 
 1. We could write a development tool that easily reads the ```terse.conf``` to figure out
 the endpoints of the services for the development and production systems. This would make it easier to
-write a crontab (or Travis CI hook) that checks for regressions of the APIs in the development and 
+write a crontab (or Travis CI hook) that checks for regressions of the APIs in the development and
 production environment.
 
 1. ```terse.conf``` is going to a be a lot easier for people to understand, and the developer in charge
