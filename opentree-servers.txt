@@ -24,4 +24,5 @@ ot21  micro  Debian 7.? opentreeoflife.org 'splash page' from Karl's lab
 ot22-27 RETIRED
 ot28  m4.large   devapi
 ot29  m3.medium  3.75G  Debian 7.5  asterales.opentreeoflife.org
-ot30  m3.medium  3.75G  Debian 7.5  otindex.opentreeoflife.org
+ot30  ???   ???   test??
+ot31  m3.medium  3.75G  Debian 7.5  otindex.opentreeoflife.org
