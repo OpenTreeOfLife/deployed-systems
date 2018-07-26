@@ -86,10 +86,10 @@ lrwxr-xr-x   1 jima  staff    54 Feb 25 12:47 opentree.pem@ -> ec2-54-202-160-17
 
 ### Running the push scripts
 
-For best results, run the scripts from within the ```opentree/deploy``` directory. If you've installed the ```opentree``` and ```deployed-systems``` repos side by side, let's start from the parent directory of both repos):
+For best results, run the scripts from within the ```germinator/deploy``` directory. If you've installed the ```germinator``` and ```deployed-systems``` repos side by side, let's start from the parent directory of both repos):
 
 ```bash
-$ cd opentree/deploy
+$ cd germinator/deploy
 $ ./push.sh -c ../../deployed-systems/development/ot3.config opentree
 ```
 
