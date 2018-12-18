@@ -12,17 +12,24 @@ Returns the otXX name as well as the IP address.
 name  server.type  OS  hostname  alias  who-is-responsible  notes
 
 ot1-13  RETIRED
-ot14  m3.medium  3.75G  Debian 7.5  tree.opentreeoflife.org
+ot14  m3.medium deployed tree from before july SOON TO BE RETIRED
 ot15  RETIRED
 ot16  m1.medium  3.7G  Debian 7.5  devtree.opentreeoflife.org
 ot17  RETIRED - was for asterales
 ot18  RETIRED - was for devapi
 ot19  RETIRED - was for MLS
-ot20  m3.large  7.5G   Debian 7.5  production  api.opentreeoflife.org 
-      (phylesystem-api + oti + taxo + treem)
-ot21  micro  Debian 7.? opentreeoflife.org 'splash page' from Karl's lab
+ot20  m3.large  7.5G   Debian 7.5  production previous api
+      (phylesystem-api + oti + taxo + treem) SOON TO BE RETIRED
+ot21  STOPPED ot21 micro Debian 7.? opentreeoflife.org 'splash page' from Karl's lab
 ot22-27 RETIRED
 ot28  m4.large   devapi
 ot29  m3.medium  3.75G  Debian 7.5  asterales.opentreeoflife.org
 ot30  ???   ???   test??
 ot31  m3.medium  3.75G  Debian 7.5  otindex.opentreeoflife.org
+ot38  KUsandbox
+ot39  KUsandbox
+ot40  KUsandbox
+ot41  m4.large Debian 8.11 api
+ot42  also points to tree
+ot43  t2.medium Debian 8.11 tree
+devotindex t2.large Debian 8.11
