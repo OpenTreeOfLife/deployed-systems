@@ -1,3 +1,0 @@
-This setup uses ot14 (tree) for the main webapp and curator, and ot20
-(api) for everything else. The phylesystem-api on ot20 uses
-the "real" phylesystem.
