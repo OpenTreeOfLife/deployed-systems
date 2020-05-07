@@ -7,7 +7,19 @@ A collection of current (and past) server configuration files for opentree compo
 
 Each named directory represents a complete working system, e.g., 'development' or 'production'. Typically this involves multiple servers working in concert, each providing websites or other services in the OpenTreeOfLife project.
 
-See the README file in each directory for a description of each system's purpose and notable history. For more on our deployment tools and how to use them, see the [deployment README](https://github.com/OpenTreeOfLife/opentree/tree/master/deploy) in the main 'opentree' repository. Details on the use of each value in a server-config file can be found in the commented [sample.config](https://github.com/OpenTreeOfLife/opentree/tree/master/deploy/sample.config) file.
+---
+
+Our current setup (early 2020) still uses `(dev)tree` for the main webapp (synth-tree viewer) and study curation tool. But we split the various "API services" into separate deployments.
+
+For most of these, the name accurately reflects what repo/system will be deployed. But note that otcetera is deployed as part of `(dev)api`. This name reflects is central role in receiving and dispatching all requests to (dev)api.opentreeoflife.org.
+
+NOTE: otindex is now handled separately via Ansible! Expect more of the same as we move away from germinator.
+
+Also NOTE the special case of 'files.opentreeoflife.org' vhost, for which see [here](http://files.opentreeoflife.org/README.md).
+
+---
+
+For more on our deployment tools and how to use them, see the [deployment README](https://github.com/OpenTreeOfLife/opentree/tree/master/deploy) in the main 'opentree' repository. Details on the use of each value in a server-config file can be found in the commented [sample.config](https://github.com/OpenTreeOfLife/opentree/tree/master/deploy/sample.config) file.
 
 ### Migrating to a new production system
 
