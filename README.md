@@ -13,7 +13,7 @@ Our current setup (early 2020) still uses `(dev)tree` for the main webapp (synth
 
 For most of these, the name accurately reflects what repo/system will be deployed. But note that otcetera is deployed as part of `(dev)api`. This name reflects is central role in receiving and dispatching all requests to (dev)api.opentreeoflife.org.
 
-NOTE: otindex is now handled separately via Ansible! Expect more of the same as we move away from germinator.
+NOTE: otindex is now [handled separately via Ansible](https://github.com/OpenTreeOfLife/otindex_ansible)! Expect more of the same as we move away from germinator.
 
 Also NOTE the special case of 'files.opentreeoflife.org' vhost, for which see [here](http://files.opentreeoflife.org/README.md).
 
